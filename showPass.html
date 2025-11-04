@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Enter Password
+        <input type="password" name="pwd" id="pwd"><br>
+        <input type="checkbox" name="chk" id="chk" value="chk">
+        <span id="show">Show</span>
+    </form>
+    <script>
+        document.getElementById('chk').addEventListener('click', function(){
+            // alert('hi');
+            let getType=document.getElementById('pwd').getAttribute('type');
+            if(getType=="password"){
+                document.getElementById('pwd').setAttribute('type', 'text');
+                document.getElementById('show').innerHTML=`Hide`;
+            }else if(getType=="text"){
+                document.getElementById('pwd').setAttribute('type', 'password');
+                document.getElementById('show').innerHTML=`Show`;
+            }
+        });
+    </script>
+</body>
+</html>
