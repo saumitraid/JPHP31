@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Date of Birth
+        <select name="day" id="day">
+            <option value="" selected>-Day-</option>
+            <script>
+                for(let d=1; d<=31; d++){
+                    document.writeln(`<option value="${d}">${d}</option>`);
+                }
+            </script>
+        </select>
+        <button type="button" id="btn">Display DOB</button>
+    </form>
+    
+</body>
+</html>
